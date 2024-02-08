@@ -37,8 +37,8 @@
 
         default_transform: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <8>;
-        rows = <9>;
+        columns = <15>;
+        rows = <5>;
 // | MX_1  | MX_2  | MX_3  | MX_4  | MX_5  | MX_6  | MX_7  | MX_8  | MX_9  | MX_10 | MX_11 | MX_12 | MX_13 | MX_68 | MX_64 
 // | MX_66 | MX_14 | MX_15 | MX_16 | MX_17 | MX_18 | MX_19 | MX_20 | MX_21 | MX_22 | MX_23 | MX_24 | MX_25 | MX_69 | MX_63 
 // | MX_65 | MX_26 | MX_27 | MX_28 | MX_29 | MX_30 | MX_32 | MX_33 | MX_34 | MX_35 | MX_36 | MX_37 | MX_38 | MX_31 
