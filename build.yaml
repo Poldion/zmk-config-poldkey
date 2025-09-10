@@ -25,5 +25,5 @@ include:
 #    snippet: studio-rpc-usb-uart
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano_v2
-    shield: my_keyboard
+    shield: PoldKey
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
