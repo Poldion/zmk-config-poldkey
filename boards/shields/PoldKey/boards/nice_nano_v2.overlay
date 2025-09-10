@@ -42,7 +42,7 @@
 
 / {
     /* External power switch for underglow; P0.13 active high */
-    ext_power: ext_power {
+    led_power: ext_power {
         compatible = "zmk,ext-power-generic";
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
         status = "okay";
@@ -50,6 +50,6 @@
 
     chosen {
         zmk,underglow = &led_strip;
-        zmk,ext-power = &ext_power;
+        zmk,ext-power = &led_power;
     };
 };
