@@ -3,4 +3,10 @@ if SHIELD_POLDKEY
 config ZMK_KEYBOARD_NAME
     default "PoldKey"
 
+config BT_CENTRAL
+    default n
+
+config BT_PERIPHERAL
+    default y
+
 endif
