@@ -4,11 +4,12 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
-        events = <>;
+        /* events moved into mock_kscan so DT will generate DT_*_events_LEN */
     };
 
     mock_kscan: mock_kscan {
         compatible = "zmk,kscan-mock";
+        events = <>; /* ensure the mock kscan node defines an 'events' property (can be empty) */
     };
 
     default_transform: matrix_transform_0 {
