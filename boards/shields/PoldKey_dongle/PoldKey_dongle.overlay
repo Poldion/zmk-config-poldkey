@@ -69,3 +69,6 @@
         transform = <&default_transform>;
     };
 };
+
+/* Provide the node label the module expects on nice!nano */
+xiao_i2c: &pro_micro_i2c {};
