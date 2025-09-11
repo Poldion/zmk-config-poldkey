@@ -59,13 +59,15 @@
 
     /* OLED on I2C, address 0x3C, 128x64 SSD1306 */
     ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb-i2c";
+        compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
         width = <128>;
         height = <64>;
         display-offset = <0>;
         segment-offset = <0>;
         page-offset = <0>;
+        multiplex-ratio = <63>;    /* required: 64MUX -> 63 */
+        prechargep = <0x22>;       /* required: typical SSD1306 value */
         status = "okay";
     };
 };
