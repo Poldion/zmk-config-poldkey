@@ -56,6 +56,17 @@
     pinctrl-0 = <&i2c0_dongle_default>;
     pinctrl-1 = <&i2c0_dongle_sleep>;
     pinctrl-names = "default", "sleep";
+
+    /* OLED on I2C, address 0x3C, 128x64 SSD1306 */
+    ssd1306: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        status = "okay";
+    };
 };
 
 / {
@@ -63,6 +74,7 @@
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
         zmk,underglow = &led_strip; /* enabled stub for RGB compile/proxy */
+        zephyr,display = &ssd1306;
         /* events moved into mock_kscan so DT will generate DT_*_events_LEN */
     };
 
